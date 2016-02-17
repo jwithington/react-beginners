@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDom = require('react-dom');
+var ReactDOM = require('react-dom');
 
 /*
  StorePicker
@@ -9,10 +9,18 @@ var ReactDom = require('react-dom');
 var StorePicker = React.createClass({
 
   render : function(){
+    var name = "jim"
+    //normal comments
     return (
-      <p>hellooooooooooo</p>
+      <form className="store-selector">
+        {/* Comments look like this*/}
+        <h2>Please Enter a Store</h2>
+        <input type="text" ref="storeId" required />
+        <input type="Submit" />
+      </form>
     )
   }
+
   });
 
-ReactDom.render(<StorePicker/>, document.querySelector('#main'));
+ReactDOM.render(<StorePicker/>, document.querySelector('#main'));
